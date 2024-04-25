@@ -12,7 +12,7 @@ function request({ url, method = "GET", data = false }) {
   }
 
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:3000" + url, options)
+    fetch(url, options)
       .then((response) => response.json())
       .then((result) => {
         if (result.success) {
